@@ -33,6 +33,7 @@ public class UserView {
 
     public void edituser(User user) {
         this.originalUser =user;
+
     }
 
     public List<User> getUserList() {
