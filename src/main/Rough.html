@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p:commandButton value="Edit" modal="true" onclick="PF('dlg1').show();">
+  <f:setPropertyActionListener value="#{user}" target="#{userView.selected}"/>
+</p:commandButton>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<f:view>
+    <h:head>
+        <title>Spring + Prime Faces</title>
+        <!-- html source code -->
+        <!--        <link type="text/css" rel="stylesheet" href="/project/faces/javax.faces.resource/theme.css?ln=primefaces-glass-x" />-->
+    </h:head>
+    <h:body>
+
+        <ui:include src="header.xhtml"/>
+        <div class="card crud-demo">
+            <h:form id="form">
+                <p:growl id="messages" showDetail="true"/>
+                <p:toolbar>
+                    <p:toolbarGroup>
+                        <h:commandLink action="registration.xhtml?faces-redirect=true"
+                                       value="Create New User"/>
+                    </p:toolbarGroup>
+                </p:toolbar>
+                <p:dataTable id="personList" rows="10" scrollable="true" scrollHeight="250" paginator="true" value="#{employeeView.employeesList}" var="employee">
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Name"/>
+                        </f:facet>
+                        <h:outputText value="#{employee.name}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Last Name"/>
+                        </f:facet>
+                        <h:outputText value="#{employee.lastName}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Email"/>
+                        </f:facet>
+                        <h:outputText value="#{employee.email}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="Edit">
+                            <h:outputText value="Edit`"/>
+                        </f:facet>
+                        <p:commandButton value="Basic" modal="true" onclick="PF('dlg1').show();"
+                                         action="#{employeeView.sendDataBack}">
+                            <f:setPropertyActionListener value="#{employee}" target="#{employeeView.selected}"/>
+                        </p:commandButton>
+                    </p:column>
+                </p:dataTable>
+            </h:form>
+            <h:form id="dialogs">
+                <p:dialog header="Employee Details" widgetVar="dlg1" minHeight="40" width="625" height="400"
+                          modal="true">
+                    <div align="center">
+                        <p:panelGrid styleClass="noBorders" columns="2">
+                            <p:outputLabel>Firstname:</p:outputLabel>
+                            <p:inputText id="firstname" value="#{employeeView.selected.name}" styleClass="w-full"/>
+                            <p:outputLabel>Lastname:</p:outputLabel>
+                            <p:inputText id="lastname" value="#{employeeView.selected.lastname}" styleClass="w-full"/>
+                            <p:outputLabel>Email:</p:outputLabel>
+                            <p:inputText id="email" value="#{employeeView.selected.email}" styleClass="w-full"/>
+                        </p:panelGrid>
+
+                    </div>
+
+                </p:dialog>
+
+            </h:form>
+        </div>
+    </h:body>
+</f:view>
+</html>
