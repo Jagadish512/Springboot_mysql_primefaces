@@ -10,7 +10,6 @@ import org.springframework.stereotype.Controller;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
-import java.util.ArrayList;
 import java.util.List;
 
 @ManagedBean(name = "userView")
@@ -26,16 +25,52 @@ public class UserView {
     private User selecteduser;
     private User originalUser;
 
+    public int getSelectedRole() {
+
+        return selectedRole;
+    }
+
+    public void setSelectedRole(int selectedRole) {
+
+        this.selectedRole = selectedRole;
+    }
+
+    private int selectedRole;
+    private String userRole;
+
+    public String getUserRole() {
+        return userRole;
+    }
+
+    public void setUserRole(String userRole) {
+        this.userRole = userRole;
+    }
+
     public void delete(User user) {
         userService.delete(user);
+
         //refreshList();
     }
 
     public void edituser(User user) {
-        this.originalUser =user;
-
+       //userService.edituser(user, userRole);
+   this.originalUser =user;
     }
 
+    public void updateUserRole() {
+        userService.updateUserRole(originalUser, selectedRole);
+    }
+
+    public void saveuser() {
+
+        userService.saveUser(originalUser);
+        refreshList();
+        //System.out.println("Saved User: " + originalUser.getName() + " " + originalUser.getEmail());
+    }
+    public void cancelEdit() {
+
+        refreshList();
+    }
     public List<User> getUserList() {
 
         return userService.getAllUsers();
@@ -63,18 +98,22 @@ public class UserView {
     }
 
     public User getOriginalUser() {
+
         return originalUser;
     }
 
     public void setOriginalUser(User originalUser) {
+
         this.originalUser = originalUser;
     }
 
-    /*public String refreshList() {
-        return "/home.xhtml";
-    }*/
+    public String refreshList() {
+
+        return "home?faces-redirect=true";
+    }
 
     public void onRowSelect(SelectEvent event) {
+
         user = (User) event.getObject();
     }
 

@@ -9,20 +9,21 @@
         <title>Spring + Prime Faces</title>
         <!-- html source code -->
         <!--        <link type="text/css" rel="stylesheet" href="/project/faces/javax.faces.resource/theme.css?ln=primefaces-glass-x" />-->
+        <script>
+            function refreshPage() {
+                location.reload();
+            }
+        </script>
+
     </h:head>
     <h:body>
-
         <ui:include src="header.xhtml"/>
         <div class="card crud-demo">
             <h:form id="form">
                 <p:growl id="messages" showDetail="true"/>
-                <p:toolbar>
-                    <p:toolbarGroup>
-                        <h:commandLink action="registration.xhtml?faces-redirect=true"
-                                       value="Create New User"/>
-                    </p:toolbarGroup>
-                </p:toolbar>
-                <p:dataTable id="personList" rows="10" scrollable="true" scrollHeight="250" paginator="true" value="#{employeeView.employeesList}" var="employee">
+                <p:link outcome="employeepage" value="Create New Employee "/>
+                <p:dataTable id="list" rows="10" scrollable="true" scrollHeight="250" paginator="true"
+                             value="#{employeeView.employeesList}" var="employee">
                     <p:column>
                         <f:facet name="header">
                             <h:outputText value="Name"/>
@@ -43,33 +44,49 @@
                     </p:column>
                     <p:column>
                         <f:facet name="Edit">
-                            <h:outputText value="Edit`"/>
+                            <h:outputText value="Edit"/>
                         </f:facet>
-                        <p:commandButton value="Basic" modal="true" onclick="PF('dlg1').show();"
-                                         action="#{employeeView.sendDataBack}">
-                            <f:setPropertyActionListener value="#{employee}" target="#{employeeView.selected}"/>
+                        <p:commandButton value="Edit" oncomplete="PF('dlg1').show();"
+                                         title="edit" actionListener="#{employeeView.editemployee(employee)}"
+                                         style="hover:blue;" update=":dialogs">
+                        </p:commandButton>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Delete"/>
+                        </f:facet>
+                        <p:commandButton value="remove"
+                                         title="delete" actionListener="#{employeeView.delete(employee)}"
+                                         style="hover:blue;" oncomplete="refreshPage()">
                         </p:commandButton>
                     </p:column>
                 </p:dataTable>
             </h:form>
+
             <h:form id="dialogs">
-                <p:dialog header="Employee Details" widgetVar="dlg1" minHeight="40" width="625" height="400"
+                <p:dialog header="Employee Details" widgetVar="dlg1" id="dlg1" minHeight="40" width="625" height="400"
                           modal="true">
                     <div align="center">
                         <p:panelGrid styleClass="noBorders" columns="2">
                             <p:outputLabel>Firstname:</p:outputLabel>
-                            <p:inputText id="firstname" value="#{employeeView.selected.name}" styleClass="w-full"/>
+                            <p:inputText id="firstname" value="#{employeeView.originalUser.name}" styleClass="w-full"/>
                             <p:outputLabel>Lastname:</p:outputLabel>
-                            <p:inputText id="lastname" value="#{employeeView.selected.lastname}" styleClass="w-full"/>
+                            <p:inputText id="lastname" value="#{employeeView.originalUser.lastName}"
+                                         styleClass="w-full"/>
                             <p:outputLabel>Email:</p:outputLabel>
-                            <p:inputText id="email" value="#{employeeView.selected.email}" styleClass="w-full"/>
+                            <p:inputText id="email" value="#{employeeView.originalUser.email}" styleClass="w-full"/>
                         </p:panelGrid>
-
+                        <p:panelGrid border="0" columns="1" styleClass="noBorders">
+                                <p:commandButton value="Save"
+                                                 title="save"
+                                                 action="#{employeeView.saveemployee()}" oncomplete="refreshPage()"/>
+                                <p:commandButton value="Cancel" action="#{employeeView.cancel}"
+                                                 oncomplete="refreshPage()"/>
+                        </p:panelGrid>
                     </div>
-
                 </p:dialog>
-
             </h:form>
+
         </div>
     </h:body>
 </f:view>

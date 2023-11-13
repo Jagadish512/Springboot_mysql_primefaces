@@ -24,7 +24,11 @@ public class EmployeeRestController {
 
 		return employeeService.getAllEmployees();
 	}
-	
+	@RequestMapping(value = "/deleteEmployee", method = RequestMethod.POST)
+	public String delete(@RequestParam long id) {
+		employeeService.delete(id);
+		return "redirect:/home"; // Redirect to a product listing page.
+	}
     @RequestMapping(value = "/employee/{id}", method = RequestMethod.GET)
 	public Employee getEmployeeById(@PathVariable("id") long id){
 		return employeeService.getEmployeeById(id);

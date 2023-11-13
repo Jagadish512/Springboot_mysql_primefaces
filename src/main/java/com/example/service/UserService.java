@@ -5,7 +5,6 @@ import com.example.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
 public interface UserService {
@@ -14,6 +13,8 @@ public interface UserService {
     User findUserByEmail(String email);
 
     void saveUser(User user);
+
+    void updateUserRole(User user, int roleId);
 
     public List<User> getAllUsers();
 
@@ -27,5 +28,7 @@ public interface UserService {
 
     public void delete(Integer id);
 
+
+     public void updateSave(User user);
 
 }

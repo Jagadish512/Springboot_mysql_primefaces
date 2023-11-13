@@ -7,6 +7,11 @@
 <f:view>
     <h:head>
         <title>Home Web Site</title>
+        <script>
+                function refreshPage() {
+                location.reload();
+            }
+        </script>
     </h:head>
     <h:body>
 
@@ -14,9 +19,14 @@
         </h:outputLink>
         <ui:include src="../header.xhtml"/>
 
-        <h3>HOME</h3>
 
         <h:form id="form">
+            <p:toolbar>
+                <p:toolbarGroup>
+                    <p:link outcome="registration" value="Registration Page"/>
+
+                </p:toolbarGroup>
+            </p:toolbar>
             <p:dataTable id="personList" scrollable="true" scrollHeight="250" paginator="true"
                          value="#{userView.userList}" var="user">
                 <p:ajax event="rowSelect"
@@ -51,40 +61,50 @@
                         <h:outputText value="Edit"/>
                     </f:facet>
                     <p:commandButton value="Edit" oncomplete="PF('dlg1').show();"
-                                     title="edit" actionListener="#{userView.edituser(user)}" update=":dialogs:dlg1"
-                                     style="hover:blue;">
+                                     title="edit" actionListener="#{userView.edituser(user)}"
+                                     style="hover:blue;" update=":dialogs">
                     </p:commandButton>
                 </p:column>
                 <p:column>
-                    <f:facet name="Delete">
+                    <f:facet name="header">
                         <h:outputText value="Delete"/>
                     </f:facet>
                     <p:commandButton value="remove"
                                      title="delete" actionListener="#{userView.delete(user)}"
-                                     style="hover:blue;">
+                                     style="hover:blue;" oncomplete="refreshPage()">
                     </p:commandButton>
                 </p:column>
+
             </p:dataTable>
         </h:form>
         <h:form id="dialogs">
             <p:dialog header="User Details" widgetVar="dlg1" id="dlg1" minHeight="40" width="625" height="400"
-                      modal="true">
+                      modal="true" onclick="PF('dlg1').hide();">
+
                 <div align="center">
                     <p:panelGrid styleClass="noBorders" columns="2">
                         <p:outputLabel>Firstname:</p:outputLabel>
-                        <p:inputText id="firstname" value="#{userView.originalUser.getName()}" styleClass="w-full"/>
+                        <p:inputText id="firstname" value="#{userView.originalUser.name}" styleClass="w-full"/>
                         <p:outputLabel>Lastname:</p:outputLabel>
-                        <p:inputText id="lastname" value="#{userView.originalUser.getLastName()}" styleClass="w-full"/>
+                        <p:inputText id="lastname" value="#{userView.originalUser.lastName}" styleClass="w-full"/>
                         <p:outputLabel>Email:</p:outputLabel>
-                        <p:inputText id="email" value="#{userView.originalUser.getEmail()}" styleClass="w-full"/>
-                    </p:panelGrid>
+                        <p:inputText id="email" value="#{userView.originalUser.email}" styleClass="w-full"/>
+                        <p:outputLabel>Role:</p:outputLabel>
+                        <p:selectOneMenu id="role" value="#{userView.selectedRole}">
+                            <f:selectItem itemLabel="Select Role" itemValue=""/>
+                            <f:selectItems value="#{roleView.roles}" var="role" itemLabel="#{role.role}" itemValue="#{role.id}"/>
+                        </p:selectOneMenu>
+                        <p:commandButton value="Save"
+                                         title="save"
+                                         actionListener="#{userView.updateUserRole()}" style="margin-right:20px;" oncomplete="refreshPage()"/>
+                        <p:commandButton id="btn" type="button"  value="Cancel" style="margin-right:20px;" onclick="PF('dlg1').hide();" oncomplete="refreshPage()"/>
 
+                    </p:panelGrid>
                 </div>
 
+
             </p:dialog>
-
         </h:form>
-
     </h:body>
 </f:view>
 </html>

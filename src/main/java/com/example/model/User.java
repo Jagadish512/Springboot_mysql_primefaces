@@ -39,27 +39,39 @@ public class User {
 	@Column(name = "active")
 	private boolean active;
 
+	@ManyToOne
+	@JoinColumn(name = "role_id")
+	private Role role;
+
 	@ManyToMany(cascade = CascadeType.MERGE)
 	@JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles;
-	
-	
+
+	public Role getRole() {
+		return role;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
+	}
+
 	public User() {
 		super();
 	}
 
-	public User(String email, String password, String name, String lastName, boolean active, Set<Role> roles) {
-		super();
+	public User(int id, String email, String password, String name, String lastName, boolean active, Role role, Set<Role> roles) {
+		this.id = id;
 		this.email = email;
 		this.password = password;
 		this.name = name;
 		this.lastName = lastName;
 		this.active = active;
+		this.role = role;
 		this.roles = roles;
 	}
-	
-	
+
 	public int getId() {
+
 		return id;
 	}
 

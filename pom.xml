@@ -104,6 +104,14 @@
 			<version>1.0.10</version>
 		</dependency>
 
+		<!-- Jagadish added -->
+
+		<!--<dependency>
+			<groupId>com.github.adminfaces</groupId>
+			<artifactId>admin-theme</artifactId>
+			<version>1.0.0</version>
+		</dependency>-->
+
 	</dependencies>
 
 	<repositories>

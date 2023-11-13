@@ -1,0 +1,39 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Employee Form</title>
+    <!--		<link rel="stylesheet" type="text/css" href="css/tables.css" />-->
+
+</h:head>
+<h:body>
+
+<h:form id="form">
+    <p:panel header="Employee Form">
+        <h:panelGrid columns="2" cellpadding="4">
+
+            <p:outputLabel value="First Name: " />
+            <p:inputText id="first-name" value="#{employeeView.employee.name}"/>
+
+            <p:outputLabel value="Last Name: " />
+            <p:inputText id="last-name" value="#{employeeView.employee.lastName}" />
+
+
+            <p:outputLabel value="Email Address: " />
+            <p:inputText id="emailaddress" value="#{employeeView.employee.email}" />
+
+            <p:outputLabel value="Mobile Number: " />
+            <p:inputNumber id="mobilenumber" value="#{employeeView.employee.phone}"/>
+
+
+                <p:commandButton value="save" ajax="false" update=":form" action="#{employeeView.createEmployee}"
+                                 styleClass="ui-button-success" />
+                <p:commandButton value="back"  action="index?faces-redirect=true"  styleClass="ui-button-success" />
+
+        </h:panelGrid>
+    </p:panel>
+</h:form>
+</h:body>
+</html>

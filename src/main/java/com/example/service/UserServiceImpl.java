@@ -1,11 +1,6 @@
 package com.example.service;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 import javax.transaction.Transactional;
 
@@ -51,7 +46,12 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
         return userRepository.findAll();
     }
+    @Override
+    @Transactional
+    public void updateSave(User user) {
 
+        userRepository.save(user);
+    }
 
     @Override
     public User getUserById(Integer id) {
@@ -60,12 +60,14 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     }
     @Override
     public void edituser(Integer id) {
+
         User user = userRepository.findOne(id);
     }
 
 
     @Override
     public void delete(User user) {
+
         userRepository.delete(user);
     }
 
@@ -81,9 +83,19 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     public void saveUser(User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         user.setActive(true);
-        Role userRole = roleRepository.findByRole("ADMIN");
-        user.setRoles(new HashSet<>(Arrays.asList(userRole)));
+       Role userRole = roleRepository.findByRole("ADMIN");
+       user.setRoles(new HashSet<>(Arrays.asList(userRole)));
         userRepository.save(user);
+    }
+
+    @Override
+    public void updateUserRole(User user, int roleId) {
+
+        User originalUser = userRepository.findById(user.getId());
+
+            Role role = roleRepository.findById(roleId);
+            originalUser.setRole(role);
+            userRepository.save(originalUser);
     }
 
     @Override

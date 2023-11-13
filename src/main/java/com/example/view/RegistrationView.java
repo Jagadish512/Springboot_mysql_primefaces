@@ -3,6 +3,7 @@ package com.example.view;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
+import com.example.model.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -17,7 +18,7 @@ public class RegistrationView {
 	@Autowired
     private UserService userService;
 	private User user = null;
-	
+
 	public RegistrationView(){
 		super();
 		user = new User();
@@ -27,6 +28,7 @@ public class RegistrationView {
 	public void userRegistration(){
 
 		userService.saveUser(user);
+
 	}
 
 
