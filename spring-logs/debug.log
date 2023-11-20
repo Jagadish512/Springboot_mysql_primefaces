@@ -1,59 +1,20 @@
-2023-11-13 00:32:14 - Starting DemoApplication on Vinays-MacBook-Pro.local with PID 14148 (/Users/vinay/Downloads/spring-boot-prime-faces/target/classes started by vinay in /Users/vinay/Downloads/spring-boot-prime-faces)
-2023-11-13 00:32:14 - Running with Spring Boot v1.5.22.RELEASE, Spring v4.3.25.RELEASE
-2023-11-13 00:32:14 - The following profiles are active: dev
-2023-11-13 00:32:24 - Started DemoApplication in 9.837 seconds (JVM running for 11.806)
-2023-11-13 00:32:24 - Application has been launched
-2023-11-13 00:47:39 - Starting DemoApplication on Vinays-MacBook-Pro.local with PID 14402 (/Users/vinay/Downloads/spring-boot-prime-faces/target/classes started by vinay in /Users/vinay/Downloads/spring-boot-prime-faces)
-2023-11-13 00:47:39 - Running with Spring Boot v1.5.22.RELEASE, Spring v4.3.25.RELEASE
-2023-11-13 00:47:39 - The following profiles are active: dev
-2023-11-13 00:47:47 - Started DemoApplication in 8.632 seconds (JVM running for 9.65)
-2023-11-13 00:47:47 - Application has been launched
-2023-11-13 00:50:30 - Starting DemoApplication on Vinays-MacBook-Pro.local with PID 14452 (/Users/vinay/Downloads/spring-boot-prime-faces/target/classes started by vinay in /Users/vinay/Downloads/spring-boot-prime-faces)
-2023-11-13 00:50:30 - Running with Spring Boot v1.5.22.RELEASE, Spring v4.3.25.RELEASE
-2023-11-13 00:50:30 - The following profiles are active: dev
-2023-11-13 00:50:39 - Started DemoApplication in 8.71 seconds (JVM running for 9.431)
-2023-11-13 00:50:39 - Application has been launched
-2023-11-13 01:05:53 - Starting DemoApplication on Vinays-MacBook-Pro.local with PID 14705 (/Users/vinay/Downloads/spring-boot-prime-faces/target/classes started by vinay in /Users/vinay/Downloads/spring-boot-prime-faces)
-2023-11-13 01:05:53 - Running with Spring Boot v1.5.22.RELEASE, Spring v4.3.25.RELEASE
-2023-11-13 01:05:53 - The following profiles are active: dev
-2023-11-13 01:06:00 - Started DemoApplication in 7.058 seconds (JVM running for 7.645)
-2023-11-13 01:06:00 - Application has been launched
-2023-11-13 10:32:49 - Starting DemoApplication on Vinays-MacBook-Pro.local with PID 16096 (/Users/vinay/Downloads/spring-boot-prime-faces/target/classes started by vinay in /Users/vinay/Downloads/spring-boot-prime-faces)
-2023-11-13 10:32:49 - Running with Spring Boot v1.5.22.RELEASE, Spring v4.3.25.RELEASE
-2023-11-13 10:32:49 - The following profiles are active: dev
-2023-11-13 10:32:56 - Started DemoApplication in 7.828 seconds (JVM running for 8.51)
-2023-11-13 10:32:56 - Application has been launched
-2023-11-13 11:06:38 - Starting DemoApplication on Vinays-MacBook-Pro.local with PID 16707 (/Users/vinay/Downloads/spring-boot-prime-faces/target/classes started by vinay in /Users/vinay/Downloads/spring-boot-prime-faces)
-2023-11-13 11:06:38 - Running with Spring Boot v1.5.22.RELEASE, Spring v4.3.25.RELEASE
-2023-11-13 11:06:38 - The following profiles are active: dev
-2023-11-13 11:06:44 - Started DemoApplication in 6.968 seconds (JVM running for 7.746)
-2023-11-13 11:06:44 - Application has been launched
-2023-11-13 11:21:03 - Starting DemoApplication on Vinays-MacBook-Pro.local with PID 16934 (/Users/vinay/Downloads/spring-boot-prime-faces/target/classes started by vinay in /Users/vinay/Downloads/spring-boot-prime-faces)
-2023-11-13 11:21:03 - Running with Spring Boot v1.5.22.RELEASE, Spring v4.3.25.RELEASE
-2023-11-13 11:21:03 - The following profiles are active: dev
-2023-11-13 11:21:10 - Started DemoApplication in 7.967 seconds (JVM running for 9.324)
-2023-11-13 11:21:10 - Application has been launched
-2023-11-13 12:02:39 - Starting DemoApplication on Vinays-MacBook-Pro.local with PID 17408 (/Users/vinay/Downloads/spring-boot-prime-faces/target/classes started by vinay in /Users/vinay/Downloads/spring-boot-prime-faces)
-2023-11-13 12:02:39 - Running with Spring Boot v1.5.22.RELEASE, Spring v4.3.25.RELEASE
-2023-11-13 12:02:39 - The following profiles are active: dev
-2023-11-13 12:02:48 - Started DemoApplication in 8.925 seconds (JVM running for 10.62)
-2023-11-13 12:02:48 - Application has been launched
-2023-11-13 12:17:34 - Starting DemoApplication on Vinays-MacBook-Pro.local with PID 17709 (/Users/vinay/Downloads/spring-boot-prime-faces/target/classes started by vinay in /Users/vinay/Downloads/spring-boot-prime-faces)
-2023-11-13 12:17:34 - Running with Spring Boot v1.5.22.RELEASE, Spring v4.3.25.RELEASE
-2023-11-13 12:17:34 - The following profiles are active: dev
-2023-11-13 12:17:42 - Application has been launched
-2023-11-13 12:17:58 - Starting DemoApplication on Vinays-MacBook-Pro.local with PID 17724 (/Users/vinay/Downloads/spring-boot-prime-faces/target/classes started by vinay in /Users/vinay/Downloads/spring-boot-prime-faces)
-2023-11-13 12:17:58 - Running with Spring Boot v1.5.22.RELEASE, Spring v4.3.25.RELEASE
-2023-11-13 12:17:58 - The following profiles are active: dev
-2023-11-13 12:18:06 - Started DemoApplication in 8.702 seconds (JVM running for 9.517)
-2023-11-13 12:18:06 - Application has been launched
-2023-11-13 12:41:59 - Starting DemoApplication on Vinays-MacBook-Pro.local with PID 18142 (/Users/vinay/Downloads/spring-boot-prime-faces/target/classes started by vinay in /Users/vinay/Downloads/spring-boot-prime-faces)
-2023-11-13 12:41:59 - Running with Spring Boot v1.5.22.RELEASE, Spring v4.3.25.RELEASE
-2023-11-13 12:41:59 - The following profiles are active: dev
-2023-11-13 12:42:07 - Started DemoApplication in 8.266 seconds (JVM running for 9.921)
-2023-11-13 12:42:07 - Application has been launched
-2023-11-13 12:54:47 - Starting DemoApplication on Vinays-MacBook-Pro.local with PID 18337 (/Users/vinay/Downloads/spring-boot-prime-faces/target/classes started by vinay in /Users/vinay/Downloads/spring-boot-prime-faces)
-2023-11-13 12:54:47 - Running with Spring Boot v1.5.22.RELEASE, Spring v4.3.25.RELEASE
-2023-11-13 12:54:47 - The following profiles are active: dev
-2023-11-13 12:54:53 - Started DemoApplication in 6.711 seconds (JVM running for 7.256)
-2023-11-13 12:54:53 - Application has been launched
+2023-11-20 12:06:13 - Starting DemoApplication on Vinays-MacBook-Pro.local with PID 51488 (/Users/vinay/Downloads/spring-boot-prime-faces/target/classes started by vinay in /Users/vinay/Downloads/spring-boot-prime-faces)
+2023-11-20 12:06:13 - Running with Spring Boot v1.5.22.RELEASE, Spring v4.3.25.RELEASE
+2023-11-20 12:06:13 - The following profiles are active: dev
+2023-11-20 12:06:22 - Started DemoApplication in 9.591 seconds (JVM running for 10.588)
+2023-11-20 12:06:22 - Application has been launched
+2023-11-20 12:11:16 - Starting DemoApplication on Vinays-MacBook-Pro.local with PID 51572 (/Users/vinay/Downloads/spring-boot-prime-faces/target/classes started by vinay in /Users/vinay/Downloads/spring-boot-prime-faces)
+2023-11-20 12:11:16 - Running with Spring Boot v1.5.22.RELEASE, Spring v4.3.25.RELEASE
+2023-11-20 12:11:16 - The following profiles are active: dev
+2023-11-20 12:11:24 - Started DemoApplication in 8.354 seconds (JVM running for 9.064)
+2023-11-20 12:11:24 - Application has been launched
+2023-11-20 12:13:50 - Starting DemoApplication on Vinays-MacBook-Pro.local with PID 51622 (/Users/vinay/Downloads/spring-boot-prime-faces/target/classes started by vinay in /Users/vinay/Downloads/spring-boot-prime-faces)
+2023-11-20 12:13:50 - Running with Spring Boot v1.5.22.RELEASE, Spring v4.3.25.RELEASE
+2023-11-20 12:13:50 - The following profiles are active: dev
+2023-11-20 12:13:59 - Started DemoApplication in 8.95 seconds (JVM running for 9.775)
+2023-11-20 12:13:59 - Application has been launched
+2023-11-20 12:25:48 - Starting DemoApplication on Vinays-MacBook-Pro.local with PID 51774 (/Users/vinay/Downloads/spring-boot-prime-faces/target/classes started by vinay in /Users/vinay/Downloads/spring-boot-prime-faces)
+2023-11-20 12:25:48 - Running with Spring Boot v1.5.22.RELEASE, Spring v4.3.25.RELEASE
+2023-11-20 12:25:48 - The following profiles are active: dev
+2023-11-20 12:25:57 - Started DemoApplication in 8.59 seconds (JVM running for 9.371)
+2023-11-20 12:25:57 - Application has been launched

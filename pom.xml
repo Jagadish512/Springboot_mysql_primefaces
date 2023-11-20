@@ -111,7 +111,16 @@
 			<artifactId>admin-theme</artifactId>
 			<version>1.0.0</version>
 		</dependency>-->
-
+		<dependency>
+			<groupId>com.twilio.sdk</groupId>
+			<artifactId>twilio</artifactId>
+			<version>8.31.0</version> <!-- Check for the latest version on Twilio's website -->
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.13</version> <!-- Use the latest version compatible with your project -->
+		</dependency>
 	</dependencies>
 
 	<repositories>

@@ -8,5 +8,10 @@
 <p:commandButton value="Edit" modal="true" onclick="PF('dlg1').show();">
   <f:setPropertyActionListener value="#{user}" target="#{userView.selected}"/>
 </p:commandButton>
+
+<p:commandButton value="Basic" modal="true" onclick="PF('dlg1').show();"
+                 action="#{employeeView.sendDataBack}">
+    <f:setPropertyActionListener value="#{employee}" target="#{employeeView.selected}"/>
+</p:commandButton>
 </body>
 </html>

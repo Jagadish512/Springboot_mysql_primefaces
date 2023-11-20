@@ -95,6 +95,8 @@
                             <f:selectItem itemLabel="Select Role" itemValue=""/>
                             <f:selectItems value="#{roleView.roles}" var="role" itemLabel="#{role.role}" itemValue="#{role.id}"/>
                         </p:selectOneMenu>
+                    </p:panelGrid>
+                    <p:panelGrid styleClass="noBorders" columns="2">
                         <p:commandButton value="Save"
                                          title="save"
                                          actionListener="#{userView.updateUserRole()}" style="margin-right:20px;" oncomplete="refreshPage()"/>

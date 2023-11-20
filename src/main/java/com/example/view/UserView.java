@@ -58,6 +58,7 @@ public class UserView {
     }
 
     public void updateUserRole() {
+
         userService.updateUserRole(originalUser, selectedRole);
     }
 
