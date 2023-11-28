@@ -24,8 +24,9 @@
                             <input type="password" id="password" name="password"/>
                         </p:panelGrid>
                         <p:panelGrid border="0" columns="2" styleClass="noBorders">
-                            <p:commandButton onclick="document.getElementById('loginForm').submit()" value="Login"/>
-                            <p:link outcome="forgotpassword" value="Forgot Password"/>
+                            <p:commandButton onclick="document.getElementById('loginForm').submit()"  styleClass="ui-button-success" value="Login"/>
+                            <p:linkButton outcome="forgotpassword" styleClass="ui-button-success" value="Forgot Password"/>
+                            <p:linkButton outcome="registration" styleClass="ui-button-success" value="New Registration"/>
                         </p:panelGrid>
                         <c:if test="${param.error}">
                             <h:outputText style="font-size: 15; color: #FF1C19;"
