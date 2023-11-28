@@ -20,7 +20,14 @@ public interface UserService {
 
     public User getUserById(Integer id);
 
+    void sendPasswordResetEmail(String email);
 
+
+    boolean isResetTokenValid(User user, String resetToken);
+
+    void updateUserPassword(User user, String newPassword);
+
+   // void invalidateResetToken(User user);
 
     public void edituser(Integer id);
 

@@ -76,7 +76,7 @@
                             <p:outputLabel>Email:</p:outputLabel>
                             <p:inputText id="email" value="#{employeeView.originalUser.email}" styleClass="w-full"/>
                         </p:panelGrid>
-                        <p:panelGrid border="0" columns="1" styleClass="noBorders">
+                        <p:panelGrid border="0" columns="2" styleClass="noBorders">
                                 <p:commandButton value="Save"
                                                  title="save"
                                                  action="#{employeeView.saveemployee()}" oncomplete="refreshPage()"/>
